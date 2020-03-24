@@ -1,16 +1,19 @@
 package lunatechlabs.springworkshop.model;
 
-import com.sun.istack.NotNull;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 
-@Table(name = "Offices")
 @Entity
+@Table(name = "Offices")
 public class Office {
 
+    /******************************
+     *          Properties
+     ******************************/
 
     @Id
     @NotNull
@@ -33,8 +36,9 @@ public class Office {
     @Column
     private String territory;
 
-    public Office() {
-    }
+    /******************************
+     *      Getters and Setters
+     ******************************/
 
     public String getOfficeCode() {
         return officeCode;

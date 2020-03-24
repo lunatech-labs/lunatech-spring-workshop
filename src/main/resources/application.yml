@@ -1,0 +1,15 @@
+# Data config
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+# Logging
+logging:
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    lunatechlabs.springworkshop: DEBUG
+    org.hibernate: ERROR
