@@ -8,7 +8,7 @@
 		<version>2.2.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>lunatech-labs</groupId>
+	<groupId>com.lunatech</groupId>
 	<artifactId>spring-workshop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-workshop</name>

@@ -22,7 +22,7 @@ logging:
   level:
     root: ERROR
     org.springframework.web: ERROR
-    lunatechlabs.springworkshop: DEBUG
+    com.lunatech.springworkshop: DEBUG
     org.hibernate: ERROR
 ---
 spring:
@@ -43,5 +43,5 @@ logging:
   level:
     root: DEBUG
     org.springframework.web: DEBUG
-    lunatechlabs.springworkshop: DEBUG
+    com.lunatech.springworkshop: DEBUG
     org.hibernate: DEBUG
