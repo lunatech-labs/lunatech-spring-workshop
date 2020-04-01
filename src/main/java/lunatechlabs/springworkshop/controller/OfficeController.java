@@ -19,7 +19,6 @@ public class OfficeController {
     @Autowired
     private OfficeService officeService;
 
-    @GetMapping("")
     @GetMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Office> getOffices(){
 
