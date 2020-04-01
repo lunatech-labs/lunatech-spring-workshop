@@ -17,6 +17,13 @@ spring:
     driverClassName: org.h2.Driver
     username: sa
     password: password
+
+# Server Config
+server:
+  port: 9090
+  servlet:
+    context-path: "/sample-company"
+
 # Logging
 logging:
   level:
@@ -24,6 +31,7 @@ logging:
     org.springframework.web: ERROR
     com.lunatech.springworkshop: DEBUG
     org.hibernate: ERROR
+
 ---
 spring:
   profiles: "dev"
@@ -38,6 +46,13 @@ spring:
     url: jdbc:mysql://localhost:3306/company
     username: root
     password: password
+
+# Server Config
+server:
+  port: 9090
+  servlet:
+    context-path: "/sample-company"
+
 # Logging
 logging:
   level:
