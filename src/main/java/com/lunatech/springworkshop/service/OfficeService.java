@@ -1,7 +1,7 @@
-package lunatechlabs.springworkshop.service;
+package com.lunatech.springworkshop.service;
 
-import lunatechlabs.springworkshop.model.Office;
-import lunatechlabs.springworkshop.repository.OfficeRepository;
+import com.lunatech.springworkshop.model.Office;
+import com.lunatech.springworkshop.repository.OfficeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

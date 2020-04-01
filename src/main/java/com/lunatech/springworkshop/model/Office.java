@@ -1,4 +1,4 @@
-package lunatechlabs.springworkshop.model;
+package com.lunatech.springworkshop.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
