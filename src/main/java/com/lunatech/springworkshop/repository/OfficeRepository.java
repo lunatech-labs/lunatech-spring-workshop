@@ -1,6 +1,6 @@
-package lunatechlabs.springworkshop.repository;
+package com.lunatech.springworkshop.repository;
 
-import lunatechlabs.springworkshop.model.Office;
+import com.lunatech.springworkshop.model.Office;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

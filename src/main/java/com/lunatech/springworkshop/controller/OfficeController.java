@@ -1,7 +1,7 @@
-package lunatechlabs.springworkshop.controller;
+package com.lunatech.springworkshop.controller;
 
-import lunatechlabs.springworkshop.model.Office;
-import lunatechlabs.springworkshop.service.OfficeService;
+import com.lunatech.springworkshop.model.Office;
+import com.lunatech.springworkshop.service.OfficeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
