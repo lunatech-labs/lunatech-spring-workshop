@@ -5,9 +5,8 @@ import lunatechlabs.springworkshop.service.OfficeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,9 +20,21 @@ public class OfficeController {
     private OfficeService officeService;
 
     @GetMapping("")
+    @GetMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Office> getOffices(){
 
-        log.debug("Entering getOffices");
+        log.info("Entering getOffices");
         return this.officeService.getAll();
+    }
+    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Office getOffice(@PathVariable("id") String id){
+
+        log.info(String.format("Entering getOffice with id %s", id));
+        return this.officeService.getById(id);
+    }
+    @PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void addOffice(@RequestBody Office office){
+        log.info("Entering addOffice");
+        this.officeService.add(office);
     }
 }

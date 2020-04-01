@@ -2,7 +2,9 @@ package lunatechlabs.springworkshop.repository;
 
 import lunatechlabs.springworkshop.model.Office;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface OfficeRepository extends JpaRepository<Office, Integer> {
+@Repository
+public interface OfficeRepository extends JpaRepository<Office, String> {
 
 }

@@ -1,11 +1,22 @@
-# Data config
 spring:
+  profiles:
+    active: "local"
+
+---
+spring:
+
+  profiles: "local"
+  # Data config
   jpa:
     hibernate:
       ddl-auto: none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-
+  datasource:
+    url: jdbc:h2:mem:companydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
 # Logging
 logging:
   level:
@@ -13,3 +24,24 @@ logging:
     org.springframework.web: ERROR
     lunatechlabs.springworkshop: DEBUG
     org.hibernate: ERROR
+---
+spring:
+  profiles: "dev"
+  # Data config
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/company
+    username: root
+    password: password
+# Logging
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: DEBUG
+    lunatechlabs.springworkshop: DEBUG
+    org.hibernate: DEBUG

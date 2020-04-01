@@ -11,9 +11,17 @@ import java.util.List;
 public class OfficeService {
 
     @Autowired
-    OfficeRepository officeRepository;
+    private OfficeRepository officeRepository;
 
     public List<Office> getAll(){
         return this.officeRepository.findAll();
+    }
+
+    public void add(Office office) {
+        this.officeRepository.save(office);
+    }
+
+    public Office getById(String id) {
+        return this.officeRepository.findById(id).get();
     }
 }
