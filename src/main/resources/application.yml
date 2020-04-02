@@ -57,6 +57,10 @@ server:
   servlet:
     context-path: "/sample-company"
 
+application:
+  instance: "instance-SW-001"
+  version: @version@
+
 # Logging
 logging:
   level:
