@@ -4,24 +4,20 @@ import com.lunatech.springworkshop.dto.CustomerDto;
 import com.lunatech.springworkshop.exception.EntityNotFoundException;
 import com.lunatech.springworkshop.model.Customer;
 import com.lunatech.springworkshop.service.CustomerService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/customers")
+@Slf4j
 public class CustomerController {
-
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private CustomerService customerService;
