@@ -1,6 +1,7 @@
 package com.lunatech.springworkshop.controller;
 
 import com.lunatech.springworkshop.dto.CustomerDto;
+import com.lunatech.springworkshop.exception.EntityNotFoundException;
 import com.lunatech.springworkshop.model.Customer;
 import com.lunatech.springworkshop.service.CustomerService;
 import org.slf4j.Logger;
@@ -48,7 +49,8 @@ public class CustomerController {
             }).get();
         } else {
             log.info(String.format("Customer doesn't exists with id %d", id));
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND,  String.format("Customer id %d, not found", id));
+            //throw new ResponseStatusException(HttpStatus.NOT_FOUND,  String.format("Customer id %d, not found", id));
+            throw new EntityNotFoundException(String.format("Customer id %d, not found", id));
         }
     }
 }
