@@ -11,13 +11,17 @@ The tech stack used to build this application is:
 
 ## Requirements ##
 + JDK 11 installed on your machine
-+ IntelliJ (desired)
++ IntelliJ Ultimate (desired). The Community version doesn't have support for Spring Framework. 
 + Maven (usually included within your IDE)
+
+But you can use the IDE of your preference.
 
 ## Configure your IDE to have support for Spring applications ##
 In your IntelliJ, follow the next steps:
 
 ### Plugins ###
+In the case that you have already enabled the support for Spring Framework, you only will need to add the Lombok plugin.
+The plugins related to spring will be enabled by default.
 Add or enable this plugins:
 + Lombok
 + Spring AOP/@AspectJ
